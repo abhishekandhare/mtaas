@@ -1,0 +1,107 @@
+TABLE CREATION DETAILS :
+
+Table Name : App Manager Sign Up
+SQL STATEMENT:
+SELECT * FROM mtaas.CREATE TABLE `appmanagersignup` (
+  `name` varchar(25) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `testtype` varchar(80) DEFAULT NULL,
+  `company` varchar(45) DEFAULT NULL,
+  `billingplan` varchar(45) DEFAULT NULL,
+  `expretise` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `passwordd` varchar(45) DEFAULT NULL,
+  `appmanagerid` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`appmanagerid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1002 DEFAULT CHARSET=utf8;
+;
+
+Table Name: testersignup
+SQL STATEMENT:
+CREATE TABLE `testersignup` (
+  `name` varchar(25) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `qualification` varchar(80) DEFAULT NULL,
+  `skills` varchar(45) DEFAULT NULL,
+  `mobileos` varchar(45) DEFAULT NULL,
+  `expretise` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `passwordd` varchar(45) DEFAULT NULL,
+  `tester_id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`tester_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1015 DEFAULT CHARSET=utf8;
+
+Table Name: authenticate
+SQL STATEMENT:
+CREATE TABLE `authenticate` (
+  `username` varchar(30) DEFAULT NULL,
+  `passwordd` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+Table Name: projectdetails
+SQL STATEMENT:
+CREATE TABLE `projectdetails` (
+  `projectid` int(11) NOT NULL AUTO_INCREMENT,
+  `appmanagerid` varchar(30) DEFAULT NULL,
+  `appname` varchar(45) DEFAULT NULL,
+  `appurl` varchar(45) DEFAULT NULL,
+  `testurl` varchar(45) DEFAULT NULL,
+  `testdesc` varchar(100) DEFAULT NULL,
+  `startdate` varchar(45) DEFAULT NULL,
+  `enddate` varchar(45) DEFAULT NULL,
+  `appmanagername` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`projectid`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+
+Table Name:registeredprojects
+SQL STATEMENT:
+CREATE TABLE `registeredprojects` (
+  `regprojectid` int(11) NOT NULL AUTO_INCREMENT,
+  `testerid` varchar(30) DEFAULT NULL,
+  `testername` varchar(50) DEFAULT NULL,
+  `appmanagerid` varchar(30) DEFAULT NULL,
+  `appmanagername` varchar(30) DEFAULT NULL,
+  `appname` varchar(45) DEFAULT NULL,
+  `appurl` varchar(100) DEFAULT NULL,
+  `testurl` varchar(100) DEFAULT NULL,
+  `testdesc` varchar(100) DEFAULT NULL,
+  `startdate` varchar(45) DEFAULT NULL,
+  `enddate` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`regprojectid`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+Table Name:testcases
+SQL STATEMENT:
+CREATE TABLE `testcases` (
+  `testcasetid` int(11) NOT NULL AUTO_INCREMENT,
+  `appname` varchar(45) DEFAULT NULL,
+  `Test Case` varchar(45) DEFAULT NULL,
+  `Bugs Found` varchar(45) DEFAULT NULL,
+  `Bug Desc` varchar(100) DEFAULT NULL,
+  `startdate` varchar(45) DEFAULT NULL,
+  `enddate` varchar(45) DEFAULT NULL,
+  `appmanagername` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`testcasetid`)
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
+
+Table Name:testersignup
+SQL STATEMENT:
+CREATE TABLE `testersignup` (
+  `name` varchar(25) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `qualification` varchar(80) DEFAULT NULL,
+  `skills` varchar(45) DEFAULT NULL,
+  `mobileos` varchar(45) DEFAULT NULL,
+  `expretise` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `passwordd` varchar(45) DEFAULT NULL,
+  `tester_id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`tester_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1015 DEFAULT CHARSET=utf8;
+
+
+
